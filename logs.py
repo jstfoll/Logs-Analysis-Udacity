@@ -1,5 +1,3 @@
-#! /usr/bin/env python3
-
 import psycopg2
 DB_NAME = "news"
 query1 = "select title,views from article_view limit 3"
@@ -9,15 +7,14 @@ group by authors.name order by views desc"""
 query3 = "select * from error_view where \"Percent Error\" > 1"
 
 query1_result = dict()
-query1_result['title'] = "\n1. The 3 most popular articles of all time are:\n"
+query1_result['title'] = "\n1. The Three most popular articles all time:\n"
 
 query2_result = dict()
-query2_result['title'] = """\n2. The most popular article authors of
+query2_result['title'] = """\n2. The most popular article authors
 all time are:\n"""
 
 query3_result = dict()
-query3_result['title'] = """\n3. Days with more than 1% of request that
-lead to an error:\n"""
+query3_result['title'] = "\n3. Days with more than 1% :\n"
 
 def get_query_result(query):
     db = psycopg2.connect(database=DB_NAME)
@@ -41,10 +38,10 @@ def print_error_query_results(query_result):
 
 
 
-query_1_result['results'] = get_query_result(query1)
-query_2_result['results'] = get_query_result(query2)
-query_3_result['results'] = get_query_result(query3)
+query1_result['results'] = get_query_result(query1)
+query2_result['results'] = get_query_result(query2)
+query3_result['results'] = get_query_result(query3)
 
-print_query_results(query_1_result)
-print_query_results(query_2_result)
-print_error_query_results(query_3_result)
+print_query_results(query1_result)
+print_query_results(query2_result)
+print_error_query_results(query3_result)
