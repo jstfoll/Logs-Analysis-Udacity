@@ -28,13 +28,13 @@ def get_query_result(query):
 def print_query_results(query_result):
     print (query_result['title'])
     for result in query_result['results']:
-        print ('\t' + str(result[0]) + ' ---> ' + str(result[1]) + ' views')
+        print ('\t' + str(result[0]) + ' = ' + str(result[1]) + ' views')
 
 
 def print_error_query_results(query_result):
     print (query_result['title'])
     for result in query_result['results']:
-        print ('\t' + str(result[0]) + ' ---> ' + str(result[1]) + ' %')
+        print ('\t' + str(result[0]) + ' = ' + str(result[1]) + ' %')
 
 
 
