@@ -10,8 +10,7 @@ query1_result = dict()
 query1_result['title'] = "\n1. The Three most popular articles all time:\n"
 
 query2_result = dict()
-query2_result['title'] = """\n2. The most popular article authors
-all time are:\n"""
+query2_result['title'] = "\n2. The most popular article authors all time are:\n"
 
 query3_result = dict()
 query3_result['title'] = "\n3. Days with more than 1% error:\n"
