@@ -13,4 +13,4 @@
 
 3. Days with more than 1% of request that lead to an error:
 
-	2016-07-17 ---> 2.26 percentage
+	2016-07-17 = 2.26 percentage
