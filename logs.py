@@ -14,7 +14,7 @@ query2_result['title'] = """\n2. The most popular article authors
 all time are:\n"""
 
 query3_result = dict()
-query3_result['title'] = "\n3. Days with more than 1% :\n"
+query3_result['title'] = "\n3. Days with more than 1% error:\n"
 
 def get_query_result(query):
     db = psycopg2.connect(database=DB_NAME)
